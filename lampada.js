@@ -28,5 +28,5 @@ turnOn.addEventListener('click', lampOn)
 turnOff.addEventListener('click', lampOf)
 lamp.addEventListener ( 'mouseover', lampOn)
 lamp.addEventListener ( 'mouseleave', lampOf)
-lamp.addEventListener('click', lampBronken)
+lamp.addEventListener('dblclick', lampBronken)
 
