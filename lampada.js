@@ -1,9 +1,9 @@
-let turnOn = document.querySelector( '#turnOn' )
-let turnOff = document.querySelector( '#turnOff' )
-let lamp = document.querySelector( '#lamp' )
+const turnOn = document.querySelector ( '#turnOn' )
+const turnOff = document.querySelector ( '#turnOff' )
+const lamp = document.querySelector ( '#lamp' )
 
 function isLampBroken() {
-    return lamp.src.indexOf ( 'quebrada' ) >  -1
+    return lamp.src.indexOf ( 'quebrada' ) > -1
 }
 
 function lampOn() {
@@ -14,19 +14,18 @@ function lampOn() {
 
 function lampOf() {
     if ( !isLampBroken() ) {
-        lamp.src = './img/desligada.jpg'
+            lamp.src = './img/desligada.jpg'
     }
 }
 
-function lampBronken() {
+function broken() {
     if ( !isLampBroken() ) {
         lamp.src = './img/quebrada.jpg'
     }
 }
 
-turnOn.addEventListener('click', lampOn)
-turnOff.addEventListener('click', lampOf)
+turnOn.addEventListener ( 'click', lampOn )
+turnOff.addEventListener ( 'click', lampOf )
 lamp.addEventListener ( 'mouseover', lampOn)
 lamp.addEventListener ( 'mouseleave', lampOf)
-lamp.addEventListener('dblclick', lampBronken)
-
+lamp.addEventListener ( 'dblclick', broken)
